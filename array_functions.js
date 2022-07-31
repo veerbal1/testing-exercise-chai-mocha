@@ -29,11 +29,15 @@ const getLastNElements = (input, n) => {
   return input.slice(input.length - n);
 };
 
-const mergeArrayToString = (input) => {
+const mergeArrayToString = (input, separateWith) => {
   if (!isArray(input)) {
     return null;
   }
-  return input.join(' ');
+  if (separateWith) {
+    return input.join(separateWith);
+  } else {
+    return input.join('');
+  }
 };
 
 module.exports = {

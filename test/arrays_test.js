@@ -47,11 +47,15 @@ describe('Array functions testing', function () {
   });
 
   it('Merge `input` array elements to form a string', function () {
-    expect(mergeArrayToString(['Veerbal', 'Singh'])).to.be.equal(
+    expect(mergeArrayToString(['Veerbal', 'Singh'], ' ')).to.be.equal(
       'Veerbal Singh'
     );
-    expect(mergeArrayToString([])).to.be.equal('');
-    expect(mergeArrayToString([2, 3, 4])).to.be.equal('2 3 4');
+    expect(mergeArrayToString(['Veerbal', 'Singh'])).to.be.equal(
+      'VeerbalSingh'
+    );
+    expect(mergeArrayToString([], '')).to.be.equal('');
+    expect(mergeArrayToString([2, 3, 4], ',')).to.be.equal('2,3,4');
+    expect(mergeArrayToString(['HTML', 'CSS'], '+')).to.be.equal('HTML+CSS');
     expect(mergeArrayToString(2, 3, 4)).to.be.null;
     expect(mergeArrayToString({ name: 'Veerbal' })).to.be.null;
   });
