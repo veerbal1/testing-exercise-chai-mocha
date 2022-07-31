@@ -4,6 +4,7 @@ const {
   getNElements,
   getLastNElements,
   mergeArrayToString,
+  sortArray,
 } = require('../array_functions');
 
 var expect = require('chai').expect;
@@ -58,5 +59,15 @@ describe('Array functions testing', function () {
     expect(mergeArrayToString(['HTML', 'CSS'], '+')).to.be.equal('HTML+CSS');
     expect(mergeArrayToString(2, 3, 4)).to.be.null;
     expect(mergeArrayToString({ name: 'Veerbal' })).to.be.null;
+  });
+
+  it('Sort Array', function () {
+    expect(sortArray([4, 3, 2, 1])).to.be.deep.equal([1, 2, 3, 4]);
+    expect(sortArray(['z', 'y', 't', 'v'])).to.be.deep.equal([
+      't',
+      'v',
+      'y',
+      'z',
+    ]);
   });
 });

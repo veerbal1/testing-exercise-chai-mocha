@@ -40,10 +40,18 @@ const mergeArrayToString = (input, separateWith) => {
   }
 };
 
+const sortArray = (input) => {
+  if (!isArray(input)) {
+    return null;
+  }
+  return input.sort();
+};
+
 module.exports = {
   isArray,
   cloneArray,
   getNElements,
   getLastNElements,
   mergeArrayToString,
+  sortArray,
 };
