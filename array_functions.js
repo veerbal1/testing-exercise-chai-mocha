@@ -19,4 +19,14 @@ const getNElements = (input, n) => {
   return input.slice(0, n);
 };
 
-module.exports = { isArray, cloneArray, getNElements };
+const getLastNElements = (input, n) => {
+  if (!isArray(input)) {
+    return null;
+  }
+  if (n > input.length) {
+    return input;
+  }
+  return input.slice(input.length - n);
+};
+
+module.exports = { isArray, cloneArray, getNElements, getLastNElements };

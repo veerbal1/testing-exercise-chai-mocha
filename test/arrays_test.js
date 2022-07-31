@@ -1,4 +1,9 @@
-const { isArray, cloneArray, getNElements } = require('../array_functions');
+const {
+  isArray,
+  cloneArray,
+  getNElements,
+  getLastNElements,
+} = require('../array_functions');
 
 var expect = require('chai').expect;
 
@@ -28,5 +33,15 @@ describe('Array functions testing', function () {
     expect(getNElements('string')).to.be.null;
     expect(getNElements(false)).to.be.null;
     expect(getNElements(369)).to.be.null;
+  });
+
+  it('Get last n elements from `input` array', function () {
+    expect(getLastNElements([1, 2, 3, 4], 3)).to.be.deep.equal([2, 3, 4]);
+    expect(getLastNElements([1, 2, 3, 4], 0)).to.be.deep.equal([]);
+    expect(getLastNElements([1, 2, 3, 4], 5)).to.be.deep.equal([1, 2, 3, 4]);
+    expect(getLastNElements(22)).to.be.null;
+    expect(getLastNElements('string')).to.be.null;
+    expect(getLastNElements(false)).to.be.null;
+    expect(getLastNElements(369)).to.be.null;
   });
 });
