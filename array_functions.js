@@ -9,4 +9,14 @@ const cloneArray = (input) => {
   return [...input];
 };
 
-module.exports = { isArray, cloneArray };
+const getNElements = (input, n) => {
+  if (!isArray(input)) {
+    return null;
+  }
+  if (n > input.length) {
+    return null;
+  }
+  return input.slice(0, n);
+};
+
+module.exports = { isArray, cloneArray, getNElements };

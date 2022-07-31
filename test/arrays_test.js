@@ -1,4 +1,4 @@
-const { isArray, cloneArray } = require('../array_functions');
+const { isArray, cloneArray, getNElements } = require('../array_functions');
 
 var expect = require('chai').expect;
 
@@ -18,5 +18,15 @@ describe('Array functions testing', function () {
     expect(cloneArray('string')).to.be.null;
     expect(cloneArray(false)).to.be.null;
     expect(cloneArray(369)).to.be.null;
+  });
+
+  it('Get n elements from `input` array', function () {
+    expect(getNElements([1, 2, 3, 4], 3)).to.be.deep.equal([1, 2, 3]);
+    expect(getNElements([1, 2, 3, 4], 0)).to.be.deep.equal([]);
+    expect(getNElements([1, 2, 3, 4], 5)).to.be.null;
+    expect(getNElements(22)).to.be.null;
+    expect(getNElements('string')).to.be.null;
+    expect(getNElements(false)).to.be.null;
+    expect(getNElements(369)).to.be.null;
   });
 });
