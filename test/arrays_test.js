@@ -23,7 +23,7 @@ describe('Array functions testing', function () {
   it('Get n elements from `input` array', function () {
     expect(getNElements([1, 2, 3, 4], 3)).to.be.deep.equal([1, 2, 3]);
     expect(getNElements([1, 2, 3, 4], 0)).to.be.deep.equal([]);
-    expect(getNElements([1, 2, 3, 4], 5)).to.be.null;
+    expect(getNElements([1, 2, 3, 4], 5)).to.be.deep.equal([1, 2, 3, 4]);
     expect(getNElements(22)).to.be.null;
     expect(getNElements('string')).to.be.null;
     expect(getNElements(false)).to.be.null;

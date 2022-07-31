@@ -14,7 +14,7 @@ const getNElements = (input, n) => {
     return null;
   }
   if (n > input.length) {
-    return null;
+    return input;
   }
   return input.slice(0, n);
 };
