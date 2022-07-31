@@ -5,7 +5,7 @@ const insertHiphenBetweenTwoEvenNumbers = (input) => {
     for (let i = 1; i < input.length; i++) {
       if (input[i - 1] % 2 === 0 && input[i] % 2 === 0) {
         result.push('-', input[i]);
-      }else{
+      } else {
         result.push(input[i]);
       }
     }
@@ -15,6 +15,20 @@ const insertHiphenBetweenTwoEvenNumbers = (input) => {
   }
 };
 
+const reverseString = (input) => {
+  if (typeof input === 'string') {
+    let splitString = input.split('');
+    let reversedCharacterArray = [];
+    for (let i = splitString.length - 1; i >= 0; i--) {
+      reversedCharacterArray.push(splitString[i]);
+    }
+    return reversedCharacterArray.join('');
+  } else {
+    return null;
+  }
+};
+
 module.exports = {
   insertHiphenBetweenTwoEvenNumbers,
+  reverseString,
 };
