@@ -1,5 +1,5 @@
-const returnEmptyArray = () => {
-  return [];
+const isArray = (input) => {
+  return Array.isArray(input);
 };
 
-module.exports = { returnEmptyArray };
+module.exports = { isArray };

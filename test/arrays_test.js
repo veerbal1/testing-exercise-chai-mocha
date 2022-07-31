@@ -1,9 +1,13 @@
-const { returnEmptyArray } = require('../array_functions');
+const { isArray } = require('../array_functions');
 
 var expect = require('chai').expect;
 
-describe('Arrays', function () {
-  it('Should return empty error', function () {
-    expect(returnEmptyArray()).to.be.deep.equal([]);
+describe('Array functions testing', function () {
+  it('Check whether an `input` is an array or not', function () {
+    expect(isArray([])).to.be.true;
+    expect(isArray(['firstName', 'lastName'])).to.be.true;
+    expect(isArray('string')).to.be.false;
+    expect(isArray(false)).to.be.false;
+    expect(isArray(369)).to.be.false;
   });
 });
