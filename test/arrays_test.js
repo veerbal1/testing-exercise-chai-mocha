@@ -6,6 +6,7 @@ const {
   mergeArrayToString,
   sortArray,
   findMostFrequent,
+  sumOfSquares,
 } = require('../array_functions');
 
 var expect = require('chai').expect;
@@ -104,5 +105,10 @@ describe('Array functions testing', function () {
       mostFrequent: '2',
       count: 7,
     });
+  });
+
+  it('Sum of squares of elements in array', () => {
+    expect(sumOfSquares([1, 2, 3, 4])).to.be.equal(30);
+    expect(sumOfSquares([1, 2, '3', 4])).to.be.null;
   });
 });

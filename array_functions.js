@@ -70,6 +70,22 @@ const findMostFrequent = (input) => {
   return { mostFrequent, count };
 };
 
+const sumOfSquares = (input) => {
+  if (!isArray(input)) {
+    return null;
+  }
+  for (let i = 0; i < input.length; i++) {
+    if (typeof input[i] !== 'number') {
+      return null;
+    }
+  }
+  let sum = 0;
+  for (let i = 0; i < input.length; i++) {
+    sum += Math.pow(input[i], 2);
+  }
+  return sum;
+};
+
 module.exports = {
   isArray,
   cloneArray,
@@ -78,4 +94,5 @@ module.exports = {
   mergeArrayToString,
   sortArray,
   findMostFrequent,
+  sumOfSquares,
 };
