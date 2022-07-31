@@ -1,0 +1,24 @@
+{
+  "name": "testing-exercise-chai-mocha",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/veerbal1/testing-exercise-chai-mocha.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/veerbal1/testing-exercise-chai-mocha/issues"
+  },
+  "homepage": "https://github.com/veerbal1/testing-exercise-chai-mocha#readme",
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0"
+  }
+}
