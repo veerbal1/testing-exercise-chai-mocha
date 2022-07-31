@@ -3,6 +3,7 @@ const {
   cloneArray,
   getNElements,
   getLastNElements,
+  mergeArrayToString,
 } = require('../array_functions');
 
 var expect = require('chai').expect;
@@ -43,5 +44,15 @@ describe('Array functions testing', function () {
     expect(getLastNElements('string')).to.be.null;
     expect(getLastNElements(false)).to.be.null;
     expect(getLastNElements(369)).to.be.null;
+  });
+
+  it('Merge `input` array elements to form a string', function () {
+    expect(mergeArrayToString(['Veerbal', 'Singh'])).to.be.equal(
+      'Veerbal Singh'
+    );
+    expect(mergeArrayToString([])).to.be.equal('');
+    expect(mergeArrayToString([2, 3, 4])).to.be.equal('2 3 4');
+    expect(mergeArrayToString(2, 3, 4)).to.be.null;
+    expect(mergeArrayToString({ name: 'Veerbal' })).to.be.null;
   });
 });

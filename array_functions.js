@@ -29,4 +29,17 @@ const getLastNElements = (input, n) => {
   return input.slice(input.length - n);
 };
 
-module.exports = { isArray, cloneArray, getNElements, getLastNElements };
+const mergeArrayToString = (input) => {
+  if (!isArray(input)) {
+    return null;
+  }
+  return input.join(' ');
+};
+
+module.exports = {
+  isArray,
+  cloneArray,
+  getNElements,
+  getLastNElements,
+  mergeArrayToString,
+};
