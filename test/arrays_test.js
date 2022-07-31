@@ -5,6 +5,7 @@ const {
   getLastNElements,
   mergeArrayToString,
   sortArray,
+  findMostFrequent,
 } = require('../array_functions');
 
 var expect = require('chai').expect;
@@ -69,5 +70,39 @@ describe('Array functions testing', function () {
       'y',
       'z',
     ]);
+  });
+
+  it('Find out most frequent', function () {
+    expect(
+      findMostFrequent([3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3])
+    ).to.be.deep.equal({
+      mostFrequent: 'a',
+      count: 5,
+    });
+    expect(
+      findMostFrequent([
+        3,
+        'a',
+        'a',
+        'a',
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        'a',
+        3,
+        'a',
+        2,
+        4,
+        9,
+        3,
+      ])
+    ).to.be.deep.equal({
+      mostFrequent: '2',
+      count: 7,
+    });
   });
 });
