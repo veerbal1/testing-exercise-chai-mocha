@@ -7,7 +7,7 @@ const {
   sortArray,
   findMostFrequent,
   sumOfSquares,
-} = require('../array_functions');
+} = require('../js/array_functions');
 
 var expect = require('chai').expect;
 

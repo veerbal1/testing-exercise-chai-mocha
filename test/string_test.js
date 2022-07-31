@@ -1,7 +1,7 @@
 const {
   insertHiphenBetweenTwoEvenNumbers,
   reverseString,
-} = require('../string_functions');
+} = require('../js/string_functions');
 
 var expect = require('chai').expect;
 
