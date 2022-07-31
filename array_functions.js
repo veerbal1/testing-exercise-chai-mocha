@@ -1,7 +1,17 @@
+/**
+ * @description - This function will check if the input is an array or not.
+ * @param {Object[]} input - array of elements
+ * @return {boolean} - true if input is array, false otherwise
+ */
 const isArray = (input) => {
   return Array.isArray(input);
 };
 
+/**
+ * @description - This function will clone an array
+ * @param {Object[]} input - array of elements
+ * @return {Object[]} - cloned array
+ */
 const cloneArray = (input) => {
   if (!isArray(input)) {
     return null;
@@ -9,6 +19,12 @@ const cloneArray = (input) => {
   return [...input];
 };
 
+/**
+ * @description - This function will first n elements of an array.
+ * @param {Object[]} input - array of elements
+ * @param {*} n - number of elements to be returned from start
+ * @return {Object[]} - array of first n elements
+ */
 const getNElements = (input, n) => {
   if (!isArray(input)) {
     return null;
@@ -19,6 +35,12 @@ const getNElements = (input, n) => {
   return input.slice(0, n);
 };
 
+/**
+ * @description - This function will return n elements of an array from last.
+ * @param {Object[]} input - array of elements
+ * @param {*} n - number of elements to be returned from end
+ * @return {Object[]} - array of last n elements
+ */
 const getLastNElements = (input, n) => {
   if (!isArray(input)) {
     return null;
@@ -29,6 +51,12 @@ const getLastNElements = (input, n) => {
   return input.slice(input.length - n);
 };
 
+/**
+ * @description - This function will return string by joining all elements of an array.
+ * @param {Object[]} input - array of elements
+ * @param {string} separateWith - string to be used as separator
+ * @return {string} - string of all elements joined by separator
+ */
 const mergeArrayToString = (input, separateWith) => {
   if (!isArray(input)) {
     return null;
@@ -40,6 +68,11 @@ const mergeArrayToString = (input, separateWith) => {
   }
 };
 
+/**
+ * @description - This function will return sorted array.
+ * @param {Object[]} - array of elements
+ * @return {Object[]} - sorted array
+ */
 const sortArray = (input) => {
   if (!isArray(input)) {
     return null;
@@ -47,6 +80,11 @@ const sortArray = (input) => {
   return input.sort();
 };
 
+/**
+ * @description - This function will return information about most frequent element in an array.
+ * @param {Object[]} input - array of elements
+ * @return {Object} - object with most frequent element and its frequency - { mostFrequent: string , count: number }
+ */
 const findMostFrequent = (input) => {
   if (!isArray(input)) {
     return null;
@@ -70,6 +108,11 @@ const findMostFrequent = (input) => {
   return { mostFrequent, count };
 };
 
+/**
+ * @description - This function will return sum of squares of all elements in an array.
+ * @param {Object[]} input - array of elements 
+ * @return {number} - sum of square of all elements
+ */
 const sumOfSquares = (input) => {
   if (!isArray(input)) {
     return null;
